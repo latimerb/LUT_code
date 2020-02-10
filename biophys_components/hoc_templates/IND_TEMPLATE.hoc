@@ -2,9 +2,9 @@
 //load_file("nrngui.hoc")
 //The parameters in this model are based on Type C cell of 3-compartment model 
 
-/////////////////////////////
+//////////////////////////////
 ///// DORSAL INTERNEURON /////
-/////////////////////////////
+//////////////////////////////
 
 begintemplate IND
 
@@ -43,18 +43,18 @@ begintemplate IND
 		insert cadyn 
 		gcabar_cadyn = 2.35e-3 
 		eca = 120
-		insert leak el_leak= -84 glbar_leak = 6e-5 Ra=RaAll cm=2.0 
-		insert hd ghdbar_hd=8e-4  78.72884325
-		insert na3 sh_na3=nash ar_na3=1	gbar_na3 = 0.12
-		insert nap gbar_nap=  0.000262//0.000142
-		insert kdr gbar_kdr=0.018
+		insert leak el_leak= -54 glbar_leak = 6e-5 Ra=RaAll cm=1.7
+		insert hd ghdbar_hd=0
+		insert na3 sh_na3=nash ar_na3=1	gbar_na3 = 0.3
+		insert nap gbar_nap=  0//0.000142
+		insert kdr gbar_kdr=0.01
 		insert capool taucas = 1000  fcas_capool = 0.05 
-		insert sAHP gsAHPbar_sAHP = 1.1e-5
-		insert im gbar_im = 12e-4
-		insert kap gkabar_kap = 0.0025
+		insert sAHP gsAHPbar_sAHP = 1.1e-4
+		insert im gbar_im = 0
+		insert kap gkabar_kap = 0
 			
 		ena = 45
-		ek = -80
+		ek = -50
 		
 		if (ismembrane("kdr") || ismembrane("kap") ) {ek=-80} //???
 		if (ismembrane("hd") ) {ehd_hd=-43 } // change from -30 to -50 //???
@@ -71,7 +71,7 @@ begintemplate IND
 		AXONM = 3 /*decrease from 2 */
 		gkdr = 0.005*.6 
 		ghd=0.000003 *.7
-		Vrest = -51 // Szucs et al. 2003
+		Vrest = -54 // Szucs et al. 2003
 		celsius = 31.0 
 		gsAHP = 0.0014//0.0005
 		GmC = 0.0096//0.0085//0.006 //0.0035 //0.0006
