@@ -1,31 +1,29 @@
-from bmtk.analyzer.cell_vars import plot_report
-from bmtk.analyzer.spike_trains import raster_plot
 import pandas as pd
 import matplotlib.pyplot as plt
-from bmtk.utils.cell_vars import CellVarsFile
 import numpy as np
-from bmtk.analyzer.cell_vars import _get_cell_report
+import pdb
+import h5py
 
-numBladaff  = 10
-numEUSaff   = 10
-numPAGaff   = 10
-numIND      = 10
-numHypo     = 10
-numINmplus  = 10
-numINmminus = 10
-numPGN      = 10
-numFB       = 10
-numIMG      = 10
-numMPG      = 10
-numEUSmn    = 10
-numBladmn   = 10
+numBladaff  = 1
+numEUSaff   = 1
+numPAGaff   = 1
+numIND      = 1
+numHypo     = 1
+numINmplus  = 1
+numINmminus = 1
+numPGN      = 1
+numFB       = 1
+numIMG      = 1
+numMPG      = 1
+numEUSmn    = 1
+numBladmn   = 1
 
 config_file = "simulation_config.json"
-report_name = None
-report_name, report_file = _get_cell_report(config_file, report_name)
 
-var_report = CellVarsFile(report_file)
-time_steps = var_report.time_trace
+v_file = "./output/cell_vars.h5"
+i = h5py.File(v_file,'r')
+mem_pot = i['report']['LUT']['data']
+
 
 # Plot spike raster ---------------------------------------
 Blad_gids = np.arange(0,numBladaff)
@@ -44,6 +42,8 @@ Bladmn_gids = EUSmn_gids + numEUSmn
 
 df = pd.read_csv("output/spikes.csv",delimiter=' ')
 rast = df.values
+
+pdb.set_trace()
 
 # Plot Bladder afferent, EUS afferent, PAG afferent, IND, and Hypo on one figure
 plt.figure()
