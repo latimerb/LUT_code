@@ -1,0 +1,73 @@
+//one-compartment cell template
+//load_file("nrngui.hoc")
+//The parameters in this model are based on Type C cell of 3-compartment model 
+
+/////////////////////////////
+///// Phasic IMG NEURON /////
+/////////////////////////////
+
+begintemplate EUS
+
+	public NumSoma
+	NumSoma = 1
+
+	public soma, connect2target, type
+	public all
+
+	create soma[NumSoma]
+
+
+	public all, somatic, basal, apical, axonal
+	objref all, somatic, basal, apical, axonal
+	objref this
+
+	proc init() {
+
+	all = new SectionList()
+	somatic = new SectionList()
+	basal = new SectionList()
+	apical = new SectionList()
+	axonal = new SectionList()
+
+	for i=0,NumSoma soma[i] { all.append() somatic.append()}
+
+     /////geometrical properties/////
+	soma[0] {nseg = 1 L = 37.77 diam = 24.5} // L = 55.2
+
+     /////biophysical properties/////
+
+	soma[0] {
+		
+		RaAll= 200
+		
+		insert leak el_leak= -54 glbar_leak = 0.0004 Ra=RaAll cm=2.2
+		
+		insert na1
+		gbar_na1 = 0.0215
+		mhalf_na1 = -40
+		hhalf_na1 = -50
+		mk_na1 = 6.7
+		hk_na1 = 7
+
+		insert k1
+		gbar_k1 = 0.004
+		vhalfn_k1 = -30
+		kn_k1 = 7
+			
+		ena = 45
+		ek = -80
+		
+		
+		}
+
+	define_shape()
+	
+		
+}
+//obfunc connect2target() { localobj nc
+//	soma nc = new NetCon(&v(0.5), $o1)
+//	nc.threshold = 0
+//	if (numarg() == 2) ($o2 = nc)
+//	return nc
+//	}
+endtemplate EUS

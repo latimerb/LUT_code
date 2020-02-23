@@ -20,7 +20,7 @@
       "gids": "all",
       "amp": 0.5,
       "delay": 500.0,
-      "duration": 1000.0
+      "duration": 750.0
     }
   },
   "output": {
@@ -35,8 +35,32 @@
       "module": "membrane_report",
       "sections": "soma"
     },
-    "cai_report": {
-      "variable_name": "cai",
+    "ina_report": {
+      "variable_name": "ina",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    },
+    "ik_report": {
+      "variable_name": "ik",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    },
+    "ninf_k1_report": {
+      "variable_name": "ninf_k1",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    },
+    "minf_na1_report": {
+      "variable_name": "minf_na1",
+      "cells": "all",
+      "module": "membrane_report",
+      "sections": "soma"
+    },
+    "hinf_na1_report": {
+      "variable_name": "hinf_na1",
       "cells": "all",
       "module": "membrane_report",
       "sections": "soma"
