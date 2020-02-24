@@ -16,19 +16,19 @@ net = NetworkBuilder('LUT')
 
 # Specify number of cells in each population #
 
-numBladaff  = 100
-numEUSaff   = 10
-numPAGaff   = 10
-numIND      = 10
-numHypo     = 10
-numINmplus  = 10
-numINmminus = 10
-numPGN      = 100
-numFB       = 10
-numIMG      = 10 
-numMPG      = 10
-numEUSmn    = 10
-numBladmn   = 10
+numBladaff  = 1
+numEUSaff   = 1
+numPAGaff   = 1
+numIND      = 1
+numHypo     = 1
+numINmplus  = 1
+numINmminus = 1
+numPGN      = 1
+numFB       = 1
+numIMG      = 1 
+numMPG      = 1
+numEUSmn    = 1
+numBladmn   = 1
 # Create the nodes ----------------------------------------
 net.add_nodes(N=numBladaff, level='high',pop_name='Bladaff',model_type='biophysical',model_template='hoc:PUD',morphology='blank.swc')
 net.add_nodes(N=numEUSaff, level='high',pop_name='EUSaff',model_type='biophysical',model_template='hoc:PUD',morphology='blank.swc')

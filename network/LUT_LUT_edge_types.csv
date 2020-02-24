@@ -1,0 +1,20 @@
+edge_type_id target_query source_query target_sections model_template distance_range dynamics_params cconnection_rule delay
+100 pop_name=='IND' pop_name=='Bladaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+101 pop_name=='Hypo' pop_name=='Bladaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+102 pop_name=='IND' pop_name=='EUSaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+103 pop_name=='IND' pop_name=='PAGaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+104 pop_name=='PGN' pop_name=='IND' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+105 pop_name=='IMG' pop_name=='Hypo' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+106 pop_name=='INmplus' pop_name=='EUSaff' ['somatic'] Exp2Syn1_STSP "[0.0, 300.0]" stsp.json NULL 2.0
+107 pop_name=='INmplus' pop_name=='PAGaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+108 pop_name=='INmminus' pop_name=='EUSaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+109 pop_name=='PGN' pop_name=='INmplus' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json "<function percent_connector at 0x7f66a27c1f28>" 2.0
+110 pop_name=='PGN' pop_name=='INmminus' ['somatic'] Exp2Syn "[0.0, 300.0]" GABA_InhToExc.json NULL 2.0
+111 pop_name=='MPG' pop_name=='PGN' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+112 pop_name=='FB' pop_name=='PGN' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+113 pop_name=='IND' pop_name=='FB' ['somatic'] Exp2Syn "[0.0, 300.0]" GABA_InhToInh.json NULL 2.0
+114 pop_name=='Bladmn' pop_name=='MPG' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0
+115 pop_name=='Bladmn' pop_name=='IMG' ['somatic'] Exp2Syn "[0.0, 300.0]" GABA_InhToInh.json NULL 2.0
+116 pop_name=='Hypo' pop_name=='PAGaff' ['somatic'] Exp2Syn "[0.0, 300.0]" GABA_InhToInh.json NULL 2.0
+117 pop_name=='EUSmn' pop_name=='PAGaff' ['somatic'] Exp2Syn "[0.0, 300.0]" GABA_InhToInh.json NULL 2.0
+118 pop_name=='EUSmn' pop_name=='EUSaff' ['somatic'] Exp2Syn "[0.0, 300.0]" AMPA_ExcToExc.json NULL 2.0

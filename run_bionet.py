@@ -23,19 +23,19 @@ press_thres = 40 # cm H20
 change_thres = 10 # cm H20 
                  # Need biological value for this
 
-numBladaff  = 100 
-numEUSaff   = 10
-numPAGaff   = 10
-numIND      = 10
-numHypo     = 10
-numINmplus  = 10
-numINmminus = 10
-numPGN      = 100
-numFB       = 10
-numIMG      = 10
-numMPG      = 10
-numEUSmn    = 10
-numBladmn   = 10
+numBladaff  = 1 
+numEUSaff   = 1
+numPAGaff   = 1
+numIND      = 1
+numHypo     = 1
+numINmplus  = 1
+numINmminus = 1
+numPGN      = 1
+numFB       = 1
+numIMG      = 1
+numMPG      = 1
+numEUSmn    = 1
+numBladmn   = 1
 
 Blad_gids = 0
 EUS_gids = Blad_gids + numBladaff

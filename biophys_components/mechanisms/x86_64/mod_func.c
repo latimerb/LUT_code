@@ -16,6 +16,7 @@ extern void _h_reg(void);
 extern void _Ih_reg(void);
 extern void _Im_reg(void);
 extern void _Im_v2_reg(void);
+extern void _k1_reg(void);
 extern void _ka_reg(void);
 extern void _kaprox_reg(void);
 extern void _kca_reg(void);
@@ -26,6 +27,7 @@ extern void _K_T_reg(void);
 extern void _Kv2like_reg(void);
 extern void _Kv3_1_reg(void);
 extern void _leak_reg(void);
+extern void _na1_reg(void);
 extern void _na3_reg(void);
 extern void _Nap_reg(void);
 extern void _NaTa_reg(void);
@@ -55,6 +57,7 @@ void modl_reg(){
     fprintf(stderr," modfiles//Ih.mod");
     fprintf(stderr," modfiles//Im.mod");
     fprintf(stderr," modfiles//Im_v2.mod");
+    fprintf(stderr," modfiles//k1.mod");
     fprintf(stderr," modfiles//ka.mod");
     fprintf(stderr," modfiles//kaprox.mod");
     fprintf(stderr," modfiles//kca.mod");
@@ -65,6 +68,7 @@ void modl_reg(){
     fprintf(stderr," modfiles//Kv2like.mod");
     fprintf(stderr," modfiles//Kv3_1.mod");
     fprintf(stderr," modfiles//leak.mod");
+    fprintf(stderr," modfiles//na1.mod");
     fprintf(stderr," modfiles//na3.mod");
     fprintf(stderr," modfiles//Nap.mod");
     fprintf(stderr," modfiles//NaTa.mod");
@@ -91,6 +95,7 @@ void modl_reg(){
   _Ih_reg();
   _Im_reg();
   _Im_v2_reg();
+  _k1_reg();
   _ka_reg();
   _kaprox_reg();
   _kca_reg();
@@ -101,6 +106,7 @@ void modl_reg(){
   _Kv2like_reg();
   _Kv3_1_reg();
   _leak_reg();
+  _na1_reg();
   _na3_reg();
   _Nap_reg();
   _NaTa_reg();
